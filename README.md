@@ -1,6 +1,6 @@
 # orange_project 
 
-DEMO: https://milofreeride.github.io/orange_project/
+DEMO: https://miloszmarcinkowski.github.io/Recruiting-project/
 
 This project was created as a recruiting task for adCookie. Site is based on UXPin project.
 
