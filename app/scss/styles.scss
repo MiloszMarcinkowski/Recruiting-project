@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+$main-font: 'Muli', sans-serif;
+$orange: rgb(243, 114, 36);
+$circle-size: 600px;
+$mobile-width: 85%;
+
+@mixin for-mobile {
+    @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-up {
+    @media (min-width: 599px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $main-font;
+}
+header {
+    max-width: 600px;
+    margin: 0 auto;
+    @include for-desktop-up {
+        height: 100vh;
+        min-height: 600px;
+        max-width: initial;
+    }
+    #scroll {
+        display: none;
+        @include for-desktop-up {
+            display: initial;
+        }
+        a {
+            text-decoration: none;
+            position: absolute;
+            left: 49%;
+            top: 85%;
+            span {
+                display: block;
+                width: 25px;
+                height: 25px;
+                border-left: 3px solid gray;
+                border-bottom: 3px solid gray;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    #scroll:hover a span {
+        border-left: 3px solid lightgray;
+        border-bottom: 3px solid lightgrey;
+    }
+    #logo {
+        width: 40%;
+        margin: 7%;
+        @include for-tablet-up {
+            width: 30%;
+        }
+        @include for-desktop-up {
+            width: 15%;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            margin: 0;
+        }
+    }
+    #content-box {
+        @include for-desktop-up {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;           
+        }
+        #welcome-box {
+            width: $mobile-width;
+            margin: auto auto;
+            @include for-desktop-up {
+                width: 400px;
+            }
+            #welcome {
+                color: $orange;
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                @include for-desktop-up {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        #right-box {
+            width: $mobile-width;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid rgb(194, 192, 192);
+            border-radius: 5px;
+            @include for-desktop-up {
+                width: 300px;
+                margin: auto;
+            }
+            #form-header {
+                font-size: 18px; 
+                font-weight: bold; 
+                text-align: center; 
+                padding-bottom: 15px;
+            }
+            #form-text {
+                font-size: 14px; 
+                text-align: center; 
+                padding-bottom: 20px;
+            }
+            #form-box {
+                #success {
+                    color: $orange;
+                    text-align: center;
+                    display: none;
+                }
+                #error {
+                    display: none; 
+                    p {
+                        font-size: 14px; 
+                        text-align: center;
+                        padding-top: 20px;
+                    }
+                }
+                input#name {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    border: 1px solid rgb(200, 200, 200); 
+                    border-radius: 5px; 
+                    padding: 5px 10px; 
+                    font-size: 16px; 
+                    height: 40px;
+                }
+                input#email {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    border: 1px solid rgb(200, 200, 200); 
+                    border-radius: 5px; 
+                    padding: 5px 10px; 
+                    font-size: 16px; 
+                    height: 40px;
+                }
+                label {
+                    font-size: 10px;
+                }
+                input#submit {
+                    width: 100%;
+                    background-color: rgb(243, 114, 36); 
+                    color: rgb(255, 255, 255); 
+                    padding: 6px 10px; 
+                    text-align: center; 
+                    border-radius: 5px;  
+                    font-size: 20px; 
+                    line-height: 20px; 
+                    height: 50px;    
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+main {
+    background-color: white;
+    border-width: 1px 0;
+    border-color: rgb(194, 192, 192); 
+    border-style: solid;
+    text-align: center;
+    padding-top: 70px;
+    h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    p {
+        width: $mobile-width;
+        margin: auto auto;
+        @include for-desktop-up {
+            width: initial;
+        }
+    }
+    #cookies-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+        .cookie {
+            border: 1px solid rgb(194,192,192);
+            border-radius: 5px;
+            margin: 20px;
+            img {
+                margin: 40px 0px;
+                max-width: 70%;
+            }
+            p {
+                font-weight: bold;
+                margin: 10px;
+            }
+        }
+    }
+}
+section {
+    #content-box {
+        @include for-desktop-up {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #left-box {
+            width: $mobile-width;
+            margin: 25px auto;
+            @include for-tablet-up {
+                text-align: center;
+            }
+            @include for-desktop-up {
+                width: 400px;
+                margin: auto;
+                text-align: initial;
+            }
+            p {
+                margin-top: 10px;
+                font-size: 0.7rem;
+            }
+        }
+        #right-box {
+            width: 75%;
+            margin: auto;
+            padding-bottom: 30px;
+            @include for-tablet-up {
+                width: 50%;
+            }
+            @include for-desktop-up {
+                width: 75%;
+                padding: 30px;
+            }
+        }
+    }
+}
+footer {
+    background-color: rgb(109,110,112);
+    color: #fff;
+    text-align: center;
+    @include for-desktop-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #info {
+        margin: 0 auto;
+        padding: 30px 0;
+        width: $mobile-width;
+        @include for-desktop-up {
+            width: 400px;
+        }
+        p:first-child {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+    }
+    #social-media {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        .item {
+            display: inline-block;
+            img {
+                width: 50px;
+                z-index: 10;
+            }
+        }
+        @include for-desktop-up {
+            justify-self: end;
+            align-self: center;
+            margin-right: 30%;
+        }
+    }
+}
+//CIRCLES
+.circle {
+    z-index: -1;
+    opacity: 0.25; 
+    background-color: $orange;
+    border-radius: 50%;
+    width: $circle-size;
+    height: $circle-size;
+    position: absolute;
+}
+#circle1 {
+    top: -$circle-size/2;
+    left: -$circle-size/2;
+    @include for-desktop-up {
+        left: 15%;
+        top: -450px;
+    }
+}
+#circle2 {
+    left: -$circle-size/2;
+    top: $circle-size;
+    @include for-desktop-up() {
+        top: 50%;
+        left: 45%;  
+    }
+}
+.circle-box {
+    position: relative;
+    #half-circle {
+        border-radius: initial;
+        position: absolute;
+        border-top-left-radius: $circle-size;
+        border-top-right-radius: $circle-size;
+        width: $circle-size;
+        height: $circle-size/2;
+        left: -$circle-size/2;
+        top: -$circle-size/2;
+    }    
+}
+
+

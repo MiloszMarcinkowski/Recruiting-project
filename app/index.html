@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rekrutacja - Front-End Developer - UXPin Preview</title>
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/styles.css">
+  <!--endbuild-->
+</head>
+<body>
+    <div class="circle" id="circle1"></div> 
+    <div class="circle" id="circle2"></div>
+  <header>
+      <div id="scroll">
+        <a href="#main"><span></span><span></span></a>
+      </div>
+    <div id="logo">
+      <img src="images/logo.svg" alt="svg">
+    </div>
+    <div id="content-box">
+      <div id="welcome-box">
+        <h1 id="welcome">Witaj w najlepszej ciastkarni w mieście!</h1>
+        <p id="welcome-text">Skoro tu jesteś to pewnie szukasz agencji marketingowej która spełni wszystkie twoje oczekiwania i kompleksowo zajmie
+          się marketingiem. Otóż obecnie nasz dział designu wypieka wyłącznie ciastka według receptury babci Stasi, która
+          czynnie uczestniczy w życiu naszej firmy. Nie znasz babci Stasi? Zostaw maila, z pewnością się odezwie do Ciebie!</p>
+      </div>
+      <div id="right-box" class="item-box">
+        <div id="form-header">
+          <p>Darmowe ciacho!</p>
+        </div>
+        <div id="form-text">
+          <p>Zostaw nam swój email a my wyślemy Ci cały karton naszych przepysznych ciastek. Nie martw się, że w formularzu
+            nie ma adresu - wiemy gdzie mieszkasz :)</p>
+        </div>
+        <div id="form-box">
+          <form id="form">
+            <input id="name" type="text" name="name" placeholder="Imię i nazwisko" required>
+            <input id= "email" type="email" name="email" placeholder="Email" required>
+            <input id="checkbox" type="checkbox">
+            <label for="checkbox">Wyrażam zgodę na dożywotnią, odpłatną dostawę ciastek do mojego domu!</label>
+            <input id="submit" type="submit" name="submit" value="Wyślijcie mi ciacho!">
+          </form>
+          <div id="success">
+            <h3>Twoje zgłoszenie zostało wysłane :)</h3>
+          </div>
+          <div id="error">
+            <p >Błąd spróbuj jeszcze raz :(</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <h1>Poznaj nasze ciacha!</h1>
+    <p>Mówią, że ciekawość to pierwszy stopień do piekła, w naszym przypadku doprowadzi Cię on tylko do pełnego żołądka! :)</p>
+    <div id="cookies-container">
+      <div class="cookie" id="cookie-one">
+        <img src="images\ciastko-f59136.png" alt="cookie-one">
+        <p>Czekoladowe WOW</p>
+      </div>
+      <div class="cookie" id="cookie-two">
+        <img src="images\ciastko-f59136.png" alt="cookie-two">
+        <p>Muffinkowy Szał</p>
+      </div>
+      <div class="cookie" id="cookie-three">
+        <img src="images\ciastko-f59136.png" alt="cookie-three">
+        <p>Słodki Janusz</p>
+      </div>
+      <div class="cookie" id="cookie-four">
+        <img src="images\ciastko-f59136.png" alt="cookie-four">
+        <p>Kwaśny Jarmuż</p>
+      </div>
+    </div>
+  </main>
+  <section>
+    <div id="content-box">
+      <div id="left-box">
+        <h1>Jak wypiekamy nasze ciacha?</h1>
+        <p>Może nie zdradzimy&nbsp;Ci naszych&nbsp;pilnie strzeżonych sekretów, ale z chęcią zaprosimy Cię do naszej fabryki!</p>
+        <p>Podczas odwiedzin na własne oczy zobaczysz jak powstają najlepsze na świecie ciacha i poznasz masę
+          <br>utalentowanych cukierników.
+        </p>
+      </div>
+      <div id="right-box">
+        <img src="images/factory.svg" alt="factory">
+      </div>
+    </div>
+    <div class="circle-box">
+      <div class="circle" id="half-circle"></div>
+    </div>
+  </section>
+  <footer>
+    <div id="info">
+      <p>Chcesz wiedzieć więcej o ciastkach?</p>
+      <p>Odwiedź nasze&nbsp;social media - znajdziesz tam masę fajnych rzeczy... prawie tak fajnych jak my :)</p>
+    </div>
+    <div id="social-media">
+      <div class="item">
+        <img src="images/facebook-logo.svg" alt="facebook-logo">
+      </div>
+      <div class="item">
+          <img src="images/twitter-logo.svg" alt="twitter-logo">
+      </div>
+      <div class="item">
+          <img src="images/linkedin-logo.svg" alt="linkedin-logo">
+      </div>
+    </div>
+  </footer>
+  <!--build:js js/main.min.js -->
+  <script src="js/lib/jquery-3.3.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
